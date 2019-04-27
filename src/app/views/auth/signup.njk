@@ -2,7 +2,7 @@
 
 {% block body %}
   {# <h1>Hello Word</h1> #}
-  <form action="/signup" method="post">
+  <form action="/signup" method="post" enctype="multipart/form-data">
     <label for="avatar">
       <img src="/images/avatar.svg" height="24">
     </label>
@@ -18,7 +18,7 @@
     Sou cabelereiro
     </label>
 
-    <input type="submit">Criar conta</input>
+    <button type="submit">Criar conta</button>
     <a href="/">Já possuo conta</a>
   </form>
 

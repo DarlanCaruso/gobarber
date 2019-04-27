@@ -1,0 +1,12 @@
+{% extends "_layouts/auth.njk" %}
+
+{% block body %}
+  {# <h1>Hello Word</h1> #}
+  <form action="/signin" method="post">
+    <img src="/images/logo.svg" height="42"/>
+    <input type="email" name="email" placeholder="Seu e-mail">
+    <input type="password" name="password" placeholder="Sua senha secreta">
+    <button type="submit">Fazer login</button>
+    <a href="/signup">Criar conta grátis</a>
+  </form>
+{% endblock %}
