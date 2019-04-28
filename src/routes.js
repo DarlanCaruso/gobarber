@@ -34,5 +34,6 @@ routes.get('/app/available/:provider', AvaliableController.index)
 
 routes.post('/signin', SessionController.store)
 routes.post('/signup', upload.single('avatar'), UserController.store)
+routes.post('/app/appointments/new/:provider', AppointmentController.store)
 
 module.exports = routes
