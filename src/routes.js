@@ -8,6 +8,12 @@ const authMiddleware = require('./app/middleware/auth')
 const guestMiddleware = require('./app/middleware/guest')
 
 routes.use('/app', authMiddleware)
+routes.use((req, res, next) => {
+  res.locals.flashSuccess = req.flash('success')
+  res.locals.flashError = req.flash('error')
+
+  return next()
+})
 
 // controllers
 const UserController = require('./app/controllers/UserController')
