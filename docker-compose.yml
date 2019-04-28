@@ -1,0 +1,13 @@
+version: "3"
+services:
+  database:
+    image: kartoza/postgis
+    container_name: gobarber_database
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    restart: always
+volumes:
+  db-data:
+    driver: local
